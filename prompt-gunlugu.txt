@@ -1,0 +1,80 @@
+PROMPT GÜNLÜĞÜ
+
+[Planlama]
+1. Yukarıda anlattığım final projem için 'Online Retail' veri seti üzerinde
+   EDA ve Müşteri Segmentasyonu (RFM + K-Means) yapacağım. Bunu Jupyter
+   Notebook üzerinde adım adım yapmam gerekiyor. Benim için veri temizlemeden
+   modellemeye kadar gidecek bir yol haritası çıkarır mısın? Hangi adımda
+   neyi nasıl yaptığını, kodları hangi mantıkla yazdığını da detaylıca anlat.
+
+[Ortam Kurulumu]
+2. Bilgisayarımda zaten Python kurulu ve jupyter notebook komutu çalışıyor,
+   buna rağmen Anaconda kurmam gerekir mi? Sadece kütüphaneleri indirsem
+   olur mu?
+
+[Veri Temizleme]
+3. CustomerID'yi astype(int) ile tam sayıya çevirdim ama describe()
+   çıktısında hâlâ ondalıklı görünüyor, kod çalışmamış mı?
+
+4. Q1 = df['Quantity'].quantile(0.25) ve IQR = Q3 - Q1 satırlarıyla
+   hesapladığımız üst sınır neye göre belirleniyor, 1.5 sayısı neden
+   seçiliyor?
+
+5. Aykırı değerleri silmek yerine neden clip() ile kırpma yöntemini
+   seçtik, ikisi arasındaki fark tam olarak ne, silmek neden daha riskli
+   olabilir?
+
+[EDA - Bulgu Sorgulama]
+6. Aylık satış grafiğinde Aralık ayında sert bir düşüş var, bunun gerçek
+   bir mevsimsellik mi yoksa veri setiyle ilgili bir eksiklikten mi
+   kaynaklandığını nasıl ayırt edebilirim?
+
+[Hata Ayıklama]
+7. sns.barplot çalıştırdığımda FutureWarning uyarısı alıyorum ama grafik
+   doğru çıkmış gibi görünüyor, bu kodumda bir hata olduğu anlamına mı
+   geliyor, düzeltmem gerekiyor mu?"
+
+[Görselleştirme Mantığı]
+8. Histogramım tek bir çubuktan ibaret, hiçbir şey görünmüyor, dağılımı
+   nasıl daha okunaklı gösterebilirim?
+
+9. Quantity ve UnitPrice için boxplot çizdirdim ama tek bir çizgi gibi
+   duruyor, kutu zar zor seçiliyor, hiçbir şey anlaşılmıyor. Dağılımı daha
+   okunaklı göstermek için grafiği logaritmik ölçekte çizebilir miyiz?
+
+[Görselleştirme Kararı]
+10. Loglu haliyle de aykırı değer noktaları çok kalabalık görünüyor,
+    bunları showfliers=False ile gizlesem mi, yoksa hocanın istediği
+    derinlik için olduğu gibi mi bırakmalıyım?
+
+[Hata Ayıklama]
+11. uk_share satırını 5.1'deki hücreye eklediğimde 'top_countries is not
+    defined' hatası alıyorum, bu neden oluyor?
+
+[Tutarlılık Sorgulama]
+12. 5.1'deki toplam satış geliri sayısı önceki çalıştırmadan farklı çıktı,
+    ikisi de aynı kodla hesaplanmıştı, bu nasıl olabilir, hangisine
+    güvenmeliyim?
+
+[Kod Açıklaması]
+13. rfm = df.groupby('CustomerID').agg(Recency=(...), Frequency=(...),
+    Monetary=(...)) bloğunu anlayamadım, özellikle lambda
+    kısmı ne yapıyor, satır satır açıklar mısın?"
+
+[Mantık Sorgulama]
+14. K-Means'ten önce StandardScaler kullanmamızın sebebi ne,
+    ölçeklendirmeden direkt RFM değerlerini verseydik ne olurdu?
+
+[Görsel Yorumlama]
+15. Elbow grafiğimde eğimin nerede belirgin şekilde yavaşladığını net
+    olarak göremiyorum, k=3 mü k=4 mü seçmeliyim, buna nasıl karar
+    vereceğim?
+
+[Proje Değerlendirme]
+16. Hocam rapor için derinlik ve genişlik önemli demiş, yazdığım rapor
+    metni bu açıdan yeterli mi, eklemek ya da çıkarmak istediğin bir şey
+    var mı?
+
+[Teslim Hazırlığı]
+17. data klasöründeki online_retail.xlsx dosyam yaklaşık 23 MB, bunu
+    GitHub'a sürükle-bırak ile yüklerken bir boyut sınırına çarpar mıyım?
